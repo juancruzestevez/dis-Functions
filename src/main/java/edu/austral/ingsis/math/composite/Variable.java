@@ -17,6 +17,11 @@ public class Variable implements Function{
     }
 
     @Override
+    public double calculate() {
+        return 0;
+    }
+
+    @Override
     public String print() {
         return variable;
     }

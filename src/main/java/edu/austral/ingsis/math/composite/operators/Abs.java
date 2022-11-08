@@ -5,29 +5,26 @@ import edu.austral.ingsis.math.composite.Function;
 import java.util.HashMap;
 import java.util.List;
 
-public class Pow implements Function{
-
+public class Abs implements Function{
     public final Function f1;
-    public final Function f2;
 
-    public Pow(Function f1, Function f2) {
+    public Abs(Function f1) {
         this.f1 = f1;
-        this.f2 = f2;
     }
 
     @Override
     public double calculate(HashMap<String, Double> results) {
-        return Math.pow(f1.calculate(results), f2.calculate(results));
+        return Math.abs(f1.calculate(results));
     }
 
     @Override
     public double calculate() {
-        return Math.pow(f1.calculate(), f2.calculate());
+        return Math.abs(f1.calculate());
     }
 
     @Override
     public String print() {
-        return  f1.print() + "^" + f2.print();
+        return "|" + f1.print() + "|";
     }
 
     @Override
@@ -38,6 +35,5 @@ public class Pow implements Function{
     @Override
     public void addToVars(List<String> vars) {
         f1.addToVars(vars);
-        f2.addToVars(vars);
     }
 }

@@ -17,6 +17,11 @@ public class Value implements Function{
     }
 
     @Override
+    public double calculate() {
+        return value;
+    }
+
+    @Override
     public String print() {
         return value.toString();
     }

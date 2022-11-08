@@ -21,6 +21,11 @@ public class Mult implements Function {
     }
 
     @Override
+    public double calculate() {
+        return f1.calculate() * f2.calculate();
+    }
+
+    @Override
     public String print() {
         return f1.print() + " * " + f2.print();
     }

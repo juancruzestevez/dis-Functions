@@ -19,6 +19,11 @@ public class Sqrt implements Function {
     }
 
     @Override
+    public double calculate() {
+        return Math.sqrt(f1.calculate());
+    }
+
+    @Override
     public String print() {
         return "√(" + f1.print() + ")";
     }

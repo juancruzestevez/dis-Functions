@@ -16,6 +16,11 @@ public class Separate implements Function{
     }
 
     @Override
+    public double calculate() {
+        return f1.calculate();
+    }
+
+    @Override
     public String print() {
         return "(" + f1.print() + ")";
     }
